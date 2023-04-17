@@ -12,8 +12,8 @@ const Nav = () => {
                         <div className="flex items-center justify-between">
                             <div className="flex w-full justify-between items-center">
                                 <div className="flex-shrink-0">
-                                    <div class="typing">
-                                        <h2 class="text-uppercase">CosmaHut...</h2>
+                                    <div className="typing">
+                                        <h2 className="text-uppercase">CosmaHut...</h2>
                                     </div>
                                 </div>
                                 <div className="hidden md:block">

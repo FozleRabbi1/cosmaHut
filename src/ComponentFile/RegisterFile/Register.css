@@ -90,6 +90,13 @@
     border-right: 1px solid #00dfc4;
 
 }
+.containerr .form .inputBox i{
+    color: #00dfc4;
+    /* background-color: #223288; */
+    position: absolute;
+    right: 10px;
+    top: 25%;
+}
 .containerr .form .inputBox input[type="submit"]{
     background-color: #00dfc4;
     color: #223243;

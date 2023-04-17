@@ -1,9 +1,15 @@
 import { Card, Dropdown } from 'flowbite-react';
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../Providers/AuthProviders';
 
 const Home = () => {
+    const {user} = useContext(UserContext);
+    console.log(user)
     return (
         <div className='w-full bg-green-500 flex'>
+            {
+                user && <span>{user.displayName}</span>
+            }
             <div className="max-w-sm">
                 <Card
                     imgAlt="Meaningful alt text for an image that is not purely decorative"
@@ -19,21 +25,21 @@ const Home = () => {
             </div>
 
             <div className="">
-            <Dropdown label="Dropdown button">
-                <Dropdown.Item>
-                    Dashboard
-                </Dropdown.Item>
-                <Dropdown.Item>
-                    Settings
-                </Dropdown.Item>
-                <Dropdown.Item>
-                    Earnings
-                </Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item>
-                    Separated link
-                </Dropdown.Item>
-            </Dropdown>
+                <Dropdown label="Dropdown button">
+                    <Dropdown.Item>
+                        Dashboard
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        Settings
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        Earnings
+                    </Dropdown.Item>
+                    <Dropdown.Divider />
+                    <Dropdown.Item>
+                        Separated link
+                    </Dropdown.Item>
+                </Dropdown>
             </div>
         </div>
     );
